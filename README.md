@@ -1,3 +1,2 @@
-# react-j6pbvq
+# react-video-call-webApp
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-j6pbvq)
