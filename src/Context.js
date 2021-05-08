@@ -5,7 +5,7 @@ import Peer from 'simple-peer';
 const SocketContext = createContext();
 
 
-const socket = io('https://zoomv.herokuapp.com');
+const socket = io.connect('https://zoomv.herokuapp.com');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
