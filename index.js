@@ -4,14 +4,14 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
 	cors: {
-		origin: "https://videomiz.herokuapp.com",
+		origin: "*",
 		methods: [ "GET", "POST" ]
 	}
 });
 
 app.use(cors());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
 	res.send('Server Running');
