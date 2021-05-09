@@ -20,7 +20,7 @@ const ContextProvider = ({ children }) => {
   const connectionRef = useRef();
 
   useEffect(() => {
-    navigator.mediaDevices.getUserMedia({ video: { facingMode:. "environment" }, audio: true })
+    navigator.mediaDevices.getUserMedia({ video: { facingMode:{ exact: "environment" } }, audio: true })
       .then((currentStream) => {
         setStream(currentStream);
 
