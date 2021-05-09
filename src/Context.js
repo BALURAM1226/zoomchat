@@ -20,7 +20,7 @@ const ContextProvider = ({ children }) => {
   const connectionRef = useRef();
 
   useEffect(() => {
-    navigator.mediaDevices.getUserMedia({ video: { facingMode : "user" } , audio: { sampleRate: 48000, channelCount:2, noiseSuppression: constraint, echoCancellation: true } })
+    navigator.mediaDevices.getUserMedia({ video: { facingMode : "user" } , audio: { sampleRate: 48000, channelCount:2, noiseSuppression: true, echoCancellation: true } })
       .then((currentStream) => {
 
         setStream(currentStream);
