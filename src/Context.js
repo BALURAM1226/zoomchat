@@ -22,10 +22,14 @@ const ContextProvider = ({ children }) => {
   useEffect(() => {
     navigator.mediaDevices.getUserMedia({ video: { facingMode:{ exact: "environment" } }, audio: true })
       .then((currentStream) => {
-        setStream(currentStream);
 
+        setStream(currentStream);
         myVideo.current.srcObject = currentStream;
-      });
+
+      }).catch((err) =>{    
+                  alert(err);
+
+        });
 
     socket.on('me', (id) => setMe(id));
 
@@ -74,9 +78,7 @@ const ContextProvider = ({ children }) => {
 
   const leaveCall = () => {
     setCallEnded(true);
-
     connectionRef.current.destroy();
-
     window.location.reload();
   };
 
