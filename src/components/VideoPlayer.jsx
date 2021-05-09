@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     -webkit-transform: 'scaleX(-1)',
     transform: 'scaleX(-1)',
     [theme.breakpoints.down('xs')]: {
+      transform: 'scaleX(-1)',
       width: '300px',
     },
   },
