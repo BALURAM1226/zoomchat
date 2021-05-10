@@ -64,7 +64,7 @@ const Sidebar = ({ children }) => {
                   Hang Up
                 </Button>
               ) : (
-                <Button variant="contained" color="primary" startIcon={<Phone fontSize="large" />} fullWidth onClick={() => callUser(idToCall)} className={classes.margin}>
+                <Button variant="contained" color="primary" startIcon={<Phone fontSize="large" />} fullWidth onClick={() => callUser(idToCall); {<p>Calling</p>}} className={classes.margin}>
                   Call
                 </Button>
               )}
